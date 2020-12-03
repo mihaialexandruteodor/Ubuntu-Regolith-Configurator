@@ -2,12 +2,8 @@ sudo apt-get install git
 
 ## i3
 
-/usr/lib/apt/apt-helper download-file https://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2020.02.03_all.deb \
-keyring.deb SHA256:c5dd35231930e3c8d6a9d9539c846023fe1a08e4b073ef0d2833acd815d80d48
-sudo dpkg -i keyring.deb
-sudo -i
-apt update
-
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt install regolith-desktop i3xrocks-net-traffic i3xrocks-cpu-usage i3xrocks-time
 
 ## polybar
 
