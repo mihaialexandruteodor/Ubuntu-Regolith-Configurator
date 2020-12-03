@@ -1,4 +1,4 @@
-# Ubuntu i3 gaps using Regolith
+# Ubuntu i3 wm using Regolith
 
 ```
 chmod a+x script.sh
