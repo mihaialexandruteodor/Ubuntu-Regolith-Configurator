@@ -1,1 +1,3 @@
-# ubuntu-i3-gaps-install-script-and-rice
+# Ubuntu i3 gaps using Regolith
+
+Also installs Allacritty terminal
