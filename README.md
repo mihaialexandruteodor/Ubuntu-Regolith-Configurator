@@ -1,3 +1,6 @@
 # Ubuntu i3 gaps using Regolith
 
-Also installs Allacritty terminal
+Also installs:
+
+[x] Allacritty terminal
+[x] VS Code
