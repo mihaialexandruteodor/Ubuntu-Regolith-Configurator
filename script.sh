@@ -37,6 +37,10 @@ mkdir -p ~/.config/regolith/i3
 cp /etc/regolith/i3/config ~/.config/regolith/i3/config
 sed -i 's_bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator_bindsym $mod+$i3-wm.binding.terminal exec alacritty_g' ~/.config/regolith/i3/config
 
+# copying Alacritty config file
+sudo mkdir ~/.config/alacritty
+sudo cp ./alacritty.yml ~/.config/alacritty/
+
 ## nano
 echo "set constantshow" >> ~/.nanorc
 echo "set linenumbers" >> ~/.nanorc
