@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:regolith-linux/release
 sudo apt install regolith-desktop i3xrocks-net-traffic i3xrocks-cpu-usage i3xrocks-time
 
 
-## Allacritty
+## Alacritty
 
 sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
 sudo apt autoremove
@@ -24,13 +24,18 @@ source $HOME/.cargo/env
 rustup override set stable
 rustup update stable
 
-## cont - Allacritty
+## cont - Alacritty
 
 cargo build --release
 sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
 sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
+
+# setting Alacritty as default terminal
+mkdir -p ~/.config/regolith/i3
+cp /etc/regolith/i3/config ~/.config/regolith/i3/config
+sed -i 's_bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator_bindsym $mod+$i3-wm.binding.terminal exec alacritty_g' ~/.config/regolith/i3/config
 
 ## nano
 echo "set constantshow" >> ~/.nanorc
@@ -65,3 +70,6 @@ sudo apt install transmission-gtk
 
 # screenfetch
 sudo apt install screenfetch
+
+# wine and winetricks
+sudo apt install wine winetricks
