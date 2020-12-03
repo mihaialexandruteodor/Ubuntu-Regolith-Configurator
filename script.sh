@@ -1,12 +1,13 @@
 sudo apt-get install git
 
-## i3-gaps
+## i3
 
-sudo add-apt-repository ppa:kgilmer/speed-ricer
-sudo apt-get update
-sudo apt-get install i3-gaps
-mkdir .i3
-mkdir .i3/config
+/usr/lib/apt/apt-helper download-file https://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2020.02.03_all.deb \
+keyring.deb SHA256:c5dd35231930e3c8d6a9d9539c846023fe1a08e4b073ef0d2833acd815d80d48
+sudo dpkg -i keyring.deb
+sudo -i
+apt update
+
 
 ## polybar
 
