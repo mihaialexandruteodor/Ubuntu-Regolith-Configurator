@@ -22,3 +22,4 @@ Also sets up Nano,enables snaps and installs:
 - [x] open-mpi
 - [x] pip3
 - [x] ML libs for python
+- [x] Thunderbird
