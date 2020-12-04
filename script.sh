@@ -75,8 +75,11 @@ sudo apt install transmission-gtk
 # screenfetch
 sudo apt install screenfetch
 
-# wine and winetricks
-sudo apt install wine winetricks
+# wine 
+sudo dpkg --add-architecture i386
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+sudo apt install --install-recommends winehq-stable
 
 # openmpi
 sudo apt install openmpi-bin
