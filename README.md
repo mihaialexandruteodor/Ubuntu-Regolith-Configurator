@@ -19,3 +19,6 @@ Also sets up Nano,enables snaps and installs:
 - [x] Transmission
 - [x] screenfetch
 - [x] wine and winetricks
+- [x] open-mpi
+- [x] pip3
+- [x] ML libs for python
