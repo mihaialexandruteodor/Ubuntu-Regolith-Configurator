@@ -91,4 +91,7 @@ sudo pip3 install sklearn
 sudo pip3 install nltk
 sudo pip3 install pandas
 
+# thunderbird
+sudo apt install thunderbird
+
 
