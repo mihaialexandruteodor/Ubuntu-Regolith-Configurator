@@ -77,3 +77,17 @@ sudo apt install screenfetch
 
 # wine and winetricks
 sudo apt install wine winetricks
+
+# openmpi
+sudo apt install openmpi-bin
+
+# pip
+sudo apt install python3-pip
+
+# jupyterlab and ML libs
+sudo pip3 install jupyterlab
+sudo pip3 install numpy
+sudo pip3 install sklearn
+sudo pip3 install nltk
+
+
