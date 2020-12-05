@@ -7,7 +7,7 @@ chmod a+x script.sh
 
 It configures Ubuntu to use a very friendly and customisable i3wm enviorment.
 
-Also sets up Nano,enables snaps and installs:
+Also sets up Nano,enables snaps and installs (many of which are optional):
 
 - [x] Allacritty terminal
 - [x] VS Code
@@ -23,3 +23,5 @@ Also sets up Nano,enables snaps and installs:
 - [x] pip3
 - [x] ML libs for python
 - [x] Thunderbird
+- [x] Chrome
+- [x] Steam
