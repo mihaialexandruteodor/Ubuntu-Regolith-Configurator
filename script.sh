@@ -1,9 +1,6 @@
 # git
 sudo apt install git
 
-# picture for wp
-cp lambo.jpg ~/Pictures
-
 # variables for selection menu
 
 allOptions=(cmake vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome)
