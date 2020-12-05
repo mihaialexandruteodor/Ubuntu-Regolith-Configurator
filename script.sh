@@ -1,6 +1,39 @@
-## git
+# variables for selection menu
 
-sudo apt-get install git
+allOptions=(cmake vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome)
+
+clear
+
+echo -e "\n"
+echo "Teo's Handy Mac Setup Script.sh"
+echo -e "Mihai Alexandru Teodor ©2020\n"
+
+echo -e "################################################################\n\n"
+
+echo -e "This script will install the i3 window manager, which you can select at login via the option in the bottom-right corner\n"
+echo -e "I'll guide you all the way, remember that shell execution can be interrupted by pressing Ctrl+Z\n"
+
+echo "First, tell me what optional packages you want:"
+
+read -n 1 -s -r -p "Press any key to continue"
+clear
+
+selectedOptions=()
+
+print_options(){
+   echo "Do you want to install $1 ?"
+   read answer
+    if [ "$answer" != "${answer#[Yy]}" ] ;then
+        selectedOptions+=($1)
+    fi
+    clear
+}
+
+for i in ${!allOptions[@]};
+do
+  opt=${allOptions[$i]}
+  print_options $opt
+done
 
 ## i3
 
@@ -51,26 +84,39 @@ sudo apt update
 sudo apt install snapd
 
 #cmake
-sudo snap install cmake --classic
+if [[ " ${selectedOptions[@]} " =~ "cmake" ]]; then
+   sudo snap install cmake --classic
+fi
 
 #vscode
-sudo snap install code --classic
+if [[ " ${selectedOptions[@]} " =~ "vscode" ]]; then
+   sudo snap install code --classic
+fi
+
 
 # sublime
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt update
-sudo apt install sublime-text
+if [[ " ${selectedOptions[@]} " =~ "sublime" ]]; then
+    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+    sudo apt-get install apt-transport-https
+    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+    sudo apt update
+    sudo apt install sublime-text
+fi
 
 # spotify
-sudo snap install spotify
+if [[ " ${selectedOptions[@]} " =~ "spotify" ]]; then
+   sudo snap install spotify
+fi
 
 # vlc
-sudo snap install vlc
+if [[ " ${selectedOptions[@]} " =~ "vlc" ]]; then
+   sudo snap install vlc
+fi
 
 # transmission
-sudo apt install transmission-gtk
+if [[ " ${selectedOptions[@]} " =~ "transmission" ]]; then
+   sudo snap install transmission-gtk
+fi
 
 # screenfetch
 sudo apt install screenfetch
@@ -81,22 +127,41 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
 sudo apt install --install-recommends winehq-stable
 
-# openmpi
-sudo apt install openmpi-bin
+# open_mpi
+if [[ " ${selectedOptions[@]} " =~ "open_mpi" ]]; then
+   sudo apt install openmpi-bin
+fi
 
 # pip
 sudo apt install python3-pip
 
 # jupyterlab and ML libs
-sudo pip3 install jupyterlab
-sudo pip3 install numpy
-sudo pip3 install sklearn
-sudo pip3 install nltk
-sudo pip3 install pandas
-sudo pip3 install keras
-sudo pip3 install tensorflow
+if [[ " ${selectedOptions[@]} " =~ "machine_learning_stuff" ]]; then
+  sudo pip3 install jupyterlab
+  sudo pip3 install numpy
+  sudo pip3 install sklearn
+  sudo pip3 install nltk
+  sudo pip3 install pandas
+  sudo pip3 install keras
+  sudo pip3 install tensorflow
+fi
+
 
 # thunderbird
-sudo apt install thunderbird
+if [[ " ${selectedOptions[@]} " =~ "thunderbird" ]]; then
+   sudo apt install thunderbird
+fi
 
+# steam
+if [[ " ${selectedOptions[@]} " =~ "steam" ]]; then
+   sudo apt install steam-installer
+fi
+
+# chrome
+if [[ " ${selectedOptions[@]} " =~ "chrome" ]]; then
+    cd ~/Downloads
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo apt install ./google-chrome-stable_current_amd64.deb
+    cd
+fi
 
