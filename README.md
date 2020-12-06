@@ -1,12 +1,6 @@
 # Ubuntu i3 wm using Regolith
 
-Download the script and run
-```
-chmod a+x script.sh
-./script.sh
-```
-
-or, much cleaner, run
+Run
 ```
 sudo apt install curl
 bash <(curl -s https://raw.githubusercontent.com/mihaialexandruteodor/ubuntu-i3-wm-Regolith/main/script.sh)
