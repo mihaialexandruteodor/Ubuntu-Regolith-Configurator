@@ -46,3 +46,4 @@ Mod+Space -> seach app (intuitive if you used Macbooks before)
 Mod+left/right arrow key -> select between windows
 Mod+Shift+left/right arrow key -> reorder windows
 ```
+Scroll wheel also works on bottom bar, switches workspaces
