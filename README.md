@@ -28,3 +28,21 @@ Also sets up Nano,enables snaps and installs (many of which are optional):
 - [x] Steam
 - [x] vim
 - [x] Midnight Commander
+
+
+Regolith useful commands:
+
+```
+Mod(Win key)+Shift+? -> help
+Mod+i -> autohide bar
+Mod+Enter -> terminal
+Mod+r -> resize mode
+Mod+Shift+[number] -> send current window to [number] workspace
+Mod+[number] -> go to [number] workspace
+Mod+Shift+N -> open file explorer(although I encourage you to type 'mc' in the terminal and use that instead)
+Mod+c -> open settings
+Mod+Shift+q -> quit
+Mod+Space -> seach app (intuitive if you used Macbooks before)
+Mod+left/right arrow key -> select between windows
+Mod+Shift+left/right arrow key -> reorder windows
+```
