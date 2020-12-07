@@ -26,3 +26,5 @@ Also sets up Nano,enables snaps and installs (many of which are optional):
 - [x] Thunderbird
 - [x] Chrome
 - [x] Steam
+- [x] vim
+- [x] Midnight Commander
