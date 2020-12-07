@@ -168,3 +168,13 @@ if [[ " ${selectedOptions[@]} " =~ "chrome" ]]; then
     cd
 fi
 
+# vim
+sudo apt install vim
+
+# midnight commander
+sudo apt install mc 
+
+clear
+
+echo -e "That should be all! Now lof out and, when logging back in, select Regolith as the wm, using the option in the lower right corner\n"
+
