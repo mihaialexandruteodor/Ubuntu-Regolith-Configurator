@@ -47,3 +47,9 @@ Mod+left/right arrow key -> select between windows
 Mod+Shift+left/right arrow key -> reorder windows
 ```
 Scroll wheel also works on bottom bar, switches workspaces
+
+mc useful commands:
+```
+ctrl+x, then quickly i -> file info
+tab -> switch between the two file explorer windows
+```
