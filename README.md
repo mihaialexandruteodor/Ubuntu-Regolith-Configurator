@@ -8,7 +8,7 @@ bash <(curl -s https://raw.githubusercontent.com/mihaialexandruteodor/ubuntu-i3-
 
 It configures Ubuntu to use a very friendly and customisable i3wm enviorment.
 
-Also sets up Nano,enables snaps and installs (many of which are optional):
+Also sets up Nano,enables snaps and installs (many of which are optional, type 'y' for yes if you want them):
 
 - [x] Allacritty terminal
 - [x] VS Code
@@ -19,7 +19,7 @@ Also sets up Nano,enables snaps and installs (many of which are optional):
 - [x] VLC
 - [x] Transmission
 - [x] screenfetch
-- [x] wine and winetricks
+- [x] wine
 - [x] open-mpi
 - [x] pip3
 - [x] ML libs for python
