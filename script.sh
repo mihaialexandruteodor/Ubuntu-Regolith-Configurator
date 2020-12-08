@@ -24,7 +24,7 @@ clear
 selectedOptions=()
 
 print_options(){
-   echo "Do you want to install $1 ?"
+   echo "Do you want to install $1 ? Type y or Y for yes, anything else for no"
    read answer
     if [ "$answer" != "${answer#[Yy]}" ] ;then
         selectedOptions+=($1)
