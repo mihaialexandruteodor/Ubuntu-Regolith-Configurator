@@ -1,8 +1,7 @@
 # Ubuntu i3 wm using Regolith
 
 <img src="https://raw.githubusercontent.com/mihaialexandruteodor/ubuntu-i3-wm-Regolith/main/demo.png"
-     alt="demo"
-     width=50% height=50% />
+     alt="demo" />
 
 
 Run
