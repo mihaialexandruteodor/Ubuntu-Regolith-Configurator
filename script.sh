@@ -3,7 +3,7 @@ sudo apt install git
 
 # variables for selection menu
 
-allOptions=(cmake vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome)
+allOptions=(cmake vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine)
 
 clear
 
@@ -125,10 +125,12 @@ fi
 sudo apt install screenfetch
 
 # wine 
-sudo dpkg --add-architecture i386
-wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
-sudo apt install --install-recommends winehq-stable
+if [[ " ${selectedOptions[@]} " =~ "wine" ]]; then
+   sudo dpkg --add-architecture i386
+   wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+   sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+   sudo apt install --install-recommends winehq-stable
+fi
 
 # open_mpi
 if [[ " ${selectedOptions[@]} " =~ "open_mpi" ]]; then
@@ -169,7 +171,9 @@ if [[ " ${selectedOptions[@]} " =~ "chrome" ]]; then
 fi
 
 # vim
-sudo apt install vim
+if [[ " ${selectedOptions[@]} " =~ "vim" ]]; then
+   sudo apt install vim
+fi
 
 # midnight commander
 sudo apt install mc 
@@ -181,5 +185,5 @@ sudo echo 'bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"' >> ~/.co
 
 clear
 
-echo -e "That should be all! Now lof out and, when logging back in, select Regolith as the wm, using the option in the lower right corner\n"
+echo -e "That should be all! Now log out and, when logging back in, select Regolith as the wm, using the option in the lower right corner\n"
 
