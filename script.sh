@@ -3,7 +3,7 @@ sudo apt install git
 
 # variables for selection menu
 
-allOptions=(cmake vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine)
+allOptions=(cmake vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine plex)
 
 clear
 
@@ -173,6 +173,11 @@ fi
 # vim
 if [[ " ${selectedOptions[@]} " =~ "vim" ]]; then
    sudo apt install vim
+fi
+
+# plex media server
+if [[ " ${selectedOptions[@]} " =~ "plex" ]]; then
+   sudo snap install plexmediaserver
 fi
 
 # midnight commander
