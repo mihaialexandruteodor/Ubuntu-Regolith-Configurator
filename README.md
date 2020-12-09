@@ -28,6 +28,7 @@ Also sets up Nano,enables snaps and installs (many of which are optional, type '
 - [x] Steam
 - [x] vim
 - [x] Midnight Commander
+- [x] Plex Media Server
 
 
 Regolith useful commands:
