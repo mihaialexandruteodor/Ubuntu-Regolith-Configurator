@@ -174,6 +174,11 @@ sudo apt install vim
 # midnight commander
 sudo apt install mc 
 
+# append volume controls
+sudo echo 'bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"' >> ~/.config/regolith/i3/config
+sudo echo 'bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"' >> ~/.config/regolith/i3/config
+sudo echo 'bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"' >> ~/.config/regolith/i3/config
+
 clear
 
 echo -e "That should be all! Now lof out and, when logging back in, select Regolith as the wm, using the option in the lower right corner\n"
