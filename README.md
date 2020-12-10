@@ -62,7 +62,7 @@ ctrl+x, then quickly i -> file info
 tab -> switch between the two file explorer windows
 ```
 
-for those with problems with alsa audio (it defaults to hdmi):
+# For those with problems with alsa audio (it defaults to hdmi):
 1 - run
 ```
 cat /proc/asound/cards
