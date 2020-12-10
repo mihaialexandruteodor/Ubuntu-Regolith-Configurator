@@ -69,9 +69,9 @@ Best course of action is to disable the hdmi profile (set it to off) in PulseAud
 
 1 - run
 ```
-cat /proc/asound/cards
+aplay -l
 ```
-to find the number of the audio card that you want to control via media keys
+to find the name of the audio card that you want to control via media keys
 
 2 - put this in ~/.asoundrc
 ```
@@ -85,6 +85,6 @@ ctl.!default {
     card #
 }
 ```
-where # is the number of your card
+where # is the name of your card
 
-Note that this script already configures such a setting for the id 2, which is the id of my onboard Gigabyte audio card, but your can be different
+Note that this script already configures such a setting for the name Generic, which is the id of my onboard Gigabyte audio card, but your can be different
