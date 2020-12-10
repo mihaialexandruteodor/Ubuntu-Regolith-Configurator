@@ -74,8 +74,9 @@ cp /etc/regolith/i3/config ~/.config/regolith/i3/config
 sed -i 's_bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator_bindsym $mod+$i3-wm.binding.terminal exec alacritty_g' ~/.config/regolith/i3/config
 
 # copying Alacritty config file
-sudo mkdir ~/.config/alacritty
-sudo cp ./alacritty.yml ~/.config/alacritty/
+curl https://raw.githubusercontent.com/mihaialexandruteodor/ubuntu-i3-wm-Regolith/main/alacritty.yml --output ~/Downloads/alacritty.yml 
+#sudo mkdir ~/.config/alacritty
+sudo mv ~/Downloads/alacritty.yml  ~/.config/alacritty/
 
 ## nano
 echo "set constantshow" >> ~/.nanorc
