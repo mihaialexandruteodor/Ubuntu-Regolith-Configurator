@@ -183,6 +183,9 @@ fi
 # midnight commander
 sudo apt install mc 
 
+# pavu control
+sudo apt install pavucontrol
+
 # append volume controls
 sudo echo 'bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"' >> ~/.config/regolith/i3/config
 sudo echo 'bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"' >> ~/.config/regolith/i3/config
