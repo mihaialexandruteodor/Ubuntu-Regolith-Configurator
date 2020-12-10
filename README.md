@@ -6,6 +6,8 @@
 <img src="https://raw.githubusercontent.com/mihaialexandruteodor/ubuntu-i3-wm-Regolith/main/demo2.png"
      alt="demo" />
 
+I do not own copyright on the wallpaper, but I couldn't find the definitive source of origin to credit.
+
 
 Run
 ```
