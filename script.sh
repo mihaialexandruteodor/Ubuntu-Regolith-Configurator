@@ -1,9 +1,9 @@
 # git
-sudo apt install git
+sudo apt install -y git
 
 # variables for selection menu
 
-allOptions=(cmake vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine plex)
+allOptions=(vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine plex)
 
 clear
 
@@ -41,12 +41,12 @@ done
 ## i3
 
 sudo add-apt-repository ppa:regolith-linux/release
-sudo apt install regolith-desktop i3xrocks-net-traffic i3xrocks-cpu-usage i3xrocks-time
+sudo apt install -y regolith-desktop i3xrocks-net-traffic i3xrocks-cpu-usage i3xrocks-time
 
 
 ## Alacritty
 
-sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
+sudo apt-get install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
 sudo apt autoremove
 
 cd ~/Downloads
@@ -84,16 +84,12 @@ echo "include \"/usr/share/nano/*.nanorc\"" >> ~/.nanorc
 
 # enable snaps
 sudo apt update
-sudo apt install snapd
+sudo apt install -y snapd
 
-#cmake
-if [[ " ${selectedOptions[@]} " =~ "cmake" ]]; then
-   sudo snap install cmake --classic
-fi
 
 #vscode
 if [[ " ${selectedOptions[@]} " =~ "vscode" ]]; then
-   sudo snap install code --classic
+   sudo snap install -y code --classic
 fi
 
 
@@ -103,42 +99,42 @@ if [[ " ${selectedOptions[@]} " =~ "sublime" ]]; then
     sudo apt-get install apt-transport-https
     echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
     sudo apt update
-    sudo apt install sublime-text
+    sudo apt install -y sublime-text
 fi
 
 # spotify
 if [[ " ${selectedOptions[@]} " =~ "spotify" ]]; then
-   sudo snap install spotify
+   sudo snap install -y  spotify
 fi
 
 # vlc
 if [[ " ${selectedOptions[@]} " =~ "vlc" ]]; then
-   sudo snap install vlc
+   sudo snap install -y vlc
 fi
 
 # transmission
 if [[ " ${selectedOptions[@]} " =~ "transmission" ]]; then
-   sudo snap install transmission-gtk
+   sudo snap install -y transmission-gtk
 fi
 
 # screenfetch
-sudo apt install screenfetch
+sudo apt install -y screenfetch
 
 # wine 
 if [[ " ${selectedOptions[@]} " =~ "wine" ]]; then
    sudo dpkg --add-architecture i386
    wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
    sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
-   sudo apt install --install-recommends winehq-stable
+   sudo apt install -y --install-recommends winehq-stable
 fi
 
 # open_mpi
 if [[ " ${selectedOptions[@]} " =~ "open_mpi" ]]; then
-   sudo apt install openmpi-bin
+   sudo apt install -y openmpi-bin
 fi
 
 # pip
-sudo apt install python3-pip
+sudo apt install -y python3-pip
 
 # jupyterlab and ML libs
 if [[ " ${selectedOptions[@]} " =~ "machine_learning_stuff" ]]; then
@@ -154,37 +150,37 @@ fi
 
 # thunderbird
 if [[ " ${selectedOptions[@]} " =~ "thunderbird" ]]; then
-   sudo apt install thunderbird
+   sudo apt install -y thunderbird
 fi
 
 # steam
 if [[ " ${selectedOptions[@]} " =~ "steam" ]]; then
-   sudo apt install steam-installer
+   sudo apt install -y steam-installer
 fi
 
 # chrome
 if [[ " ${selectedOptions[@]} " =~ "chrome" ]]; then
     cd ~/Downloads
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo apt install ./google-chrome-stable_current_amd64.deb
+    sudo apt install -y ./google-chrome-stable_current_amd64.deb
     cd
 fi
 
 # vim
 if [[ " ${selectedOptions[@]} " =~ "vim" ]]; then
-   sudo apt install vim
+   sudo apt install -y vim
 fi
 
 # plex media server
 if [[ " ${selectedOptions[@]} " =~ "plex" ]]; then
-   sudo snap install plexmediaserver
+   sudo snap install -y plexmediaserver
 fi
 
 # midnight commander
-sudo apt install mc 
+sudo apt install -y mc 
 
 # pavu control
-sudo apt install pavucontrol
+sudo apt install -y pavucontrol
 
 # append volume controls
 sudo echo 'bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"' >> ~/.config/regolith/i3/config
