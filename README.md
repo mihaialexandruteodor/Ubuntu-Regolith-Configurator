@@ -64,16 +64,16 @@ ctrl+x, then quickly i -> file info
 tab -> switch between the two file explorer windows
 ```
 
-# For those with problems with alsa audio (it defaults to hdmi/ media keys don't work on keyboards that have them):
+## For those with problems with alsa audio (it defaults to hdmi/ media keys don't work on keyboards that have them):
 Best course of action is to disable the hdmi profile (set it to off) in PulseAudio Volume Control, but you can also try:
 
 1 - run
 ```
 cat /proc/asound/cards
 ```
-to find the number of your audio card
+to find the number of the audio card that you want to control via media keys
 
-2 - put this in /usr/share/alsa/alsa.conf
+2 - put this in ~/.asoundrc
 ```
 pcm.!default {
     type hw
@@ -86,3 +86,5 @@ ctl.!default {
 }
 ```
 where # is the number of your card
+
+Note that this script already configures such a setting for the id 2, which is the id of my onboard Gigabyte audio card, but your can be different
