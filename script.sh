@@ -188,6 +188,16 @@ sudo echo 'bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 sudo echo 'bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"' >> ~/.config/regolith/i3/config
 sudo echo 'bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"' >> ~/.config/regolith/i3/config
 
+# brightness
+sudo echo 'bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness' >> ~/.config/regolith/i3/config
+sudo echo 'bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness' >> ~/.config/regolith/i3/config
+
+# Media player controls
+sudo echo 'bindsym XF86AudioPlay exec playerctl play-pause' >> ~/.config/regolith/i3/config
+sudo echo 'bindsym XF86AudioPause exec playerctl play-pause' >> ~/.config/regolith/i3/config
+sudo echo 'bindsym XF86AudioNext exec playerctl next' >> ~/.config/regolith/i3/config
+sudo echo 'bindsym XF86AudioPrev exec playerctl previou' >> ~/.config/regolith/i3/config
+
 clear
 
 echo -e "That should be all! Now log out and, when logging back in, select Regolith as the wm, using the option in the lower right corner\n"
