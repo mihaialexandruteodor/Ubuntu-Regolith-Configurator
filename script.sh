@@ -198,6 +198,11 @@ sudo echo 'bindsym XF86AudioPause exec playerctl play-pause' >> ~/.config/regoli
 sudo echo 'bindsym XF86AudioNext exec playerctl next' >> ~/.config/regolith/i3/config
 sudo echo 'bindsym XF86AudioPrev exec playerctl previou' >> ~/.config/regolith/i3/config
 
+# wallpaper
+sudo apt install feh -y
+curl https://raw.githubusercontent.com/mihaialexandruteodor/ubuntu-i3-wm-Regolith/main/wallpaper.jpg --output ~/Pictures/wallpaper.jpg --silent
+feh --bg-fill  ~/Pictures/wallpaper.jpg
+
 clear
 
 echo -e "That should be all! Now log out and, when logging back in, select Regolith as the wm, using the option in the lower right corner\n"
