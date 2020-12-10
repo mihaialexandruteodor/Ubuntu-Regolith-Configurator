@@ -62,7 +62,9 @@ ctrl+x, then quickly i -> file info
 tab -> switch between the two file explorer windows
 ```
 
-# For those with problems with alsa audio (it defaults to hdmi):
+# For those with problems with alsa audio (it defaults to hdmi/ media keys don't work on keyboards that have them):
+Best course of action is to disable the hdmi profile (set it to off) in PulseAudio Volume Control, but you can also try:
+
 1 - run
 ```
 cat /proc/asound/cards
