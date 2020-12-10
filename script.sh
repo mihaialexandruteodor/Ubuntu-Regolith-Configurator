@@ -208,12 +208,12 @@ feh --bg-fill  ~/Pictures/wallpaper.jpg
 touch ~/.asoundrc
 sudo echo 'pcm.!default {
     type hw
-    card 2
+    card Generic
 }
 
 ctl.!default {
     type hw
-    card 2
+    card Generic
 }' >> ~/.asoundrc
 ##################
 
