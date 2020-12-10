@@ -203,6 +203,21 @@ sudo apt install feh -y
 curl https://raw.githubusercontent.com/mihaialexandruteodor/ubuntu-i3-wm-Regolith/main/wallpaper.jpg --output ~/Pictures/wallpaper.jpg --silent
 feh --bg-fill  ~/Pictures/wallpaper.jpg
 
+# this is for defaulting to an onboard sound card which, in my case, has the id '2'. the following instructions can be deleted if it causes you problems
+###############
+touch ~/.asoundrc
+sudo echo 'pcm.!default {
+    type hw
+    card 2
+}
+
+ctl.!default {
+    type hw
+    card 2
+}' >> ~/.asoundrc
+##################
+
+
 clear
 
 echo -e "That should be all! Now log out and, when logging back in, select Regolith as the wm, using the option in the lower right corner\n"
