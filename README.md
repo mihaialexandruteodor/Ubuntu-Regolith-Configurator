@@ -61,3 +61,24 @@ mc useful commands:
 ctrl+x, then quickly i -> file info
 tab -> switch between the two file explorer windows
 ```
+
+for those with problems with alsa audio (it defaults to hdmi):
+1 - run
+```
+cat /proc/asound/cards
+```
+to find the number of your audio card
+
+2 - put this in /usr/share/alsa/alsa.conf
+```
+pcm.!default {
+    type hw
+    card #
+}
+
+ctl.!default {
+    type hw
+    card #
+}
+```
+where # is the number of your card
