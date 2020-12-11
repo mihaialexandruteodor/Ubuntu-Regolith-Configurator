@@ -65,7 +65,7 @@ tab -> switch between the two file explorer windows
 ```
 
 ## For those with problems with alsa audio (it defaults to hdmi/ media keys don't work on keyboards that have them):
-First make sure if the volume keys don't work, or it's just the popup icon that doesn't show up.
+First make sure if the volume keys don't work, or it's just the popup icon that doesn't show up. You can check with alsamixer in terminal.
 They're broken? 
 Best course of action is to disable the hdmi profile (set it to off) in PulseAudio Volume Control, but if that doesn't solve it, you can also try:
 
