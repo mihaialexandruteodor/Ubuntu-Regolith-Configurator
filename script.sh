@@ -1,6 +1,9 @@
 # git
 sudo apt install -y git
 
+# ffmpeg
+sudo apt install -y ffmpeg
+
 # variables for selection menu
 
 allOptions=(vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine plex)
