@@ -4,6 +4,9 @@ sudo apt install -y git
 # ffmpeg
 sudo apt install -y ffmpeg
 
+# mono - runing form exe apps like RemoteMouse
+sudo apt-get install -y mono-complete xdotool libappindicator0.1-cil-dev
+
 # variables for selection menu
 
 allOptions=(vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine plex)
