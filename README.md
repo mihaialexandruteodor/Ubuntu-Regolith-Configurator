@@ -41,7 +41,7 @@ Also sets up Nano,enables snaps and installs (many of which are optional, type '
 - [x] Darling
 
 
-Regolith useful commands:
+## Regolith useful commands:
 
 ```
 Mod(Win key)+Shift+? -> help
@@ -59,7 +59,7 @@ Mod+Shift+left/right arrow key -> reorder windows
 ```
 Scroll wheel also works on bottom bar, switches workspaces
 
-Midnight Commander useful commands:
+## Midnight Commander useful commands:
 ```
 ctrl+x, then quickly i -> file info
 tab -> switch between the two file explorer windows
