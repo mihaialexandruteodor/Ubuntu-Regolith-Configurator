@@ -53,16 +53,18 @@ Mod+[number] -> go to [number] workspace
 Mod+Shift+N -> open file explorer(although I encourage you to type 'mc' in the terminal and use that instead)
 Mod+c -> open settings
 Mod+Shift+q -> quit
-Mod+Space -> seach app (intuitive if you used Macbooks before)
+Mod+Space -> search 
 Mod+left/right arrow key -> select between windows
 Mod+Shift+left/right arrow key -> reorder windows
 ```
 Scroll wheel also works on bottom bar, switches workspaces
 
-mc useful commands:
+Midnight Commander useful commands:
 ```
 ctrl+x, then quickly i -> file info
 tab -> switch between the two file explorer windows
+Alt+Shift+? - search files/folders
+F9 - access context menu
 ```
 
 ## For those with problems with alsa audio (it defaults to hdmi/ media keys don't work on keyboards that have them):
