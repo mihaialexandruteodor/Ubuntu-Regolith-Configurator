@@ -6,6 +6,7 @@ sudo apt upgrade -y --fix-missing
 
 # neovim
 sudo apt install -y neovim
+sed 'set number' ~/.vimrc
 
 # ffmpeg
 sudo apt install -y ffmpeg
