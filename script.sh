@@ -1,6 +1,12 @@
 # git
 sudo apt install -y git
 
+# fix missing packages
+sudo apt upgrade -y --fix-missing
+
+# neovim
+sudo apt install -y neovim
+
 # ffmpeg
 sudo apt install -y ffmpeg
 
@@ -181,6 +187,23 @@ fi
 # plex media server
 if [[ " ${selectedOptions[@]} " =~ "plex" ]]; then
    sudo snap install -y plexmediaserver
+fi
+
+#vscode
+if [[ " ${selectedOptions[@]} " =~ "darling" ]]; then
+    sudo apt install -y cmake clang bison flex libfuse-dev libudev-dev pkg-config libc6-dev-i386 \
+linux-headers-generic gcc-multilib libcairo2-dev libgl1-mesa-dev libglu1-mesa-dev libtiff5-dev \
+libfreetype6-dev git git-lfs libelf-dev libxml2-dev libegl1-mesa-dev libfontconfig1-dev libbsd-dev \
+libxrandr-dev libxcursor-dev libgif-dev libavutil-dev libpulse-dev libavformat-dev libavcodec-dev \
+libswresample-dev libdbus-1-dev libxkbfile-dev libssl-dev
+   git clone --recursive https://github.com/darlinghq/darling.git
+   cd darling
+   mkdir build && cd build
+   cmake .. -Wno-dev
+   make
+   sudo make install
+   make lkm
+   sudo make lkm_install
 fi
 
 # midnight commander
