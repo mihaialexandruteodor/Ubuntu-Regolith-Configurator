@@ -188,7 +188,7 @@ fi
 
 #vscode
 if [[ " ${selectedOptions[@]} " =~ "darling" ]]; then
-    sudo apt install python2
+    sudo apt install -y python2
     sudo apt install -y cmake clang bison flex libfuse-dev libudev-dev pkg-config libc6-dev-i386 \
 linux-headers-generic gcc-multilib libcairo2-dev libgl1-mesa-dev libglu1-mesa-dev libtiff5-dev \
 libfreetype6-dev git git-lfs libelf-dev libxml2-dev libegl1-mesa-dev libfontconfig1-dev libbsd-dev \
@@ -202,7 +202,7 @@ libswresample-dev libdbus-1-dev libxkbfile-dev libssl-dev
    sudo make install
    make lkm
    sudo make lkm_install
-   sudo apt remove python2
+   sudo apt remove -y python2
 fi
 
 # midnight commander
