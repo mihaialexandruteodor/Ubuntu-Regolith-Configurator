@@ -35,9 +35,10 @@ Also sets up Nano,enables snaps and installs (many of which are optional, type '
 - [x] Thunderbird
 - [x] Chrome
 - [x] Steam
-- [x] vim
+- [x] neovim
 - [x] Midnight Commander
 - [x] Plex Media Server
+- [x] Darling
 
 
 Regolith useful commands:
