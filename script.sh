@@ -17,7 +17,7 @@ sudo apt-get install -y mono-complete xdotool libappindicator0.1-cil-dev
 
 # variables for selection menu
 
-allOptions=(vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome vim wine plex darling)
+allOptions=(vscode sublime spotify vlc transmission open_mpi machine_learning_stuff thunderbird steam chrome wine plex darling)
 
 clear
 
@@ -179,11 +179,6 @@ if [[ " ${selectedOptions[@]} " =~ "chrome" ]]; then
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo apt install -y ./google-chrome-stable_current_amd64.deb
     cd
-fi
-
-# vim
-if [[ " ${selectedOptions[@]} " =~ "vim" ]]; then
-   sudo apt install -y vim
 fi
 
 # plex media server
